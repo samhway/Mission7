@@ -9,19 +9,14 @@
     <div class="text-left">
         @foreach (Book b in Model.Books)
         {
-            <h4>@b.Title</h4>
-            <h5 style="color: darkslateblue;">$@b.Price</h5>
-            <ul>
-                <li>Author: @b.Author</li>
-                <li>Publisher: @b.Publisher</li>
-                <li>Category: @b.Category</li>
-                <li>Classification: @b.Classification</li>
-                <li>Page count: @b.PageCount</li>
-                <li>ISBN: @b.Isbn</li>
-            </ul>
+            <partial name="BookSummary" model="b" />
         }
     </div>
 </div>
 
-<h5 style="color: darkslateblue;">Pages</h5>
-<div style="flex" page-blah="@Model.PageInfo" page-action="Index"></div>
+<div class="container">
+    <h5 style="color: darkslateblue;">Pages</h5>
+    <div style="flex" page-blah="@Model.PageInfo" page-action="Index" page-class="btn"
+         page-class-normal="btn-outline-dark" page-class-enabled="true"
+         page-class-selected="btn-primary" class="btn-group pull-right m-1"></div>
+</div>
