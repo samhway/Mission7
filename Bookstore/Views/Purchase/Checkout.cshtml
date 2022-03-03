@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Purchase
+
+<h2>Checkout here</h2>
+<p>Please enter your information, and we will get the books sent your way</p>
+
+<form method="post" asp-action="Checkout">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <h4>Ship To</h4>
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <h4>Shipping information</h4>
+    <div class="form-group">
+        <label asp-for="AddressLine1">AddressLine1</label>
+        <input asp-for="AddressLine1" class="form-control" />
+        <label asp-for="AddressLine2">AddressLine2</label>
+        <input asp-for="AddressLine2" class="form-control" />
+        <label asp-for="AddressLine3">AddressLine3</label>
+        <input asp-for="AddressLine3" class="form-control" />
+        <label asp-for="City">City</label>
+        <input asp-for="City" class="form-control" />
+        <label asp-for="Zip">Zip</label>
+        <input asp-for="Zip" class="form-control" />
+        <label asp-for="State">State</label>
+        <input asp-for="State" class="form-control" />
+        <label asp-for="Country">Country</label>
+        <input asp-for="Country" class="form-control" />
+    </div>
+
+    <div class="float-end">
+        <input class="btn btn-primary" type="submit" value="Submit Purchase" />
+    </div>
+</form>
